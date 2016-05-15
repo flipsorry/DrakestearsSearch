@@ -1,0 +1,56 @@
+[2016-05-15 13:39:44,559][ERROR][bootstrap                ] Exception
+java.lang.RuntimeException: Java version: Oracle Corporation 1.7.0_45 [Java HotSpot(TM) 64-Bit Server VM 24.45-b08] suffers from critical bug https://bugs.openjdk.java.net/browse/JDK-8024830 which can cause data corruption.
+Please upgrade the JVM, see http://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html for current recommendations.
+If you absolutely cannot upgrade, please add -XX:-UseSuperWord to the JAVA_OPTS environment variable.
+Upgrading is preferred, this workaround will result in degraded performance.
+	at org.elasticsearch.bootstrap.JVMCheck.check(JVMCheck.java:123)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:268)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+[2016-05-15 13:44:30,859][ERROR][bootstrap                ] Exception
+java.lang.RuntimeException: Java version: Oracle Corporation 1.7.0_45 [Java HotSpot(TM) 64-Bit Server VM 24.45-b08] suffers from critical bug https://bugs.openjdk.java.net/browse/JDK-8024830 which can cause data corruption.
+Please upgrade the JVM, see http://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html for current recommendations.
+If you absolutely cannot upgrade, please add -XX:-UseSuperWord to the JAVA_OPTS environment variable.
+Upgrading is preferred, this workaround will result in degraded performance.
+	at org.elasticsearch.bootstrap.JVMCheck.check(JVMCheck.java:123)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:268)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+[2016-05-15 13:45:18,270][ERROR][bootstrap                ] Exception
+java.lang.RuntimeException: Java version: Oracle Corporation 1.7.0_45 [Java HotSpot(TM) 64-Bit Server VM 24.45-b08] suffers from critical bug https://bugs.openjdk.java.net/browse/JDK-8024830 which can cause data corruption.
+Please upgrade the JVM, see http://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html for current recommendations.
+If you absolutely cannot upgrade, please add -XX:-UseSuperWord to the JAVA_OPTS environment variable.
+Upgrading is preferred, this workaround will result in degraded performance.
+	at org.elasticsearch.bootstrap.JVMCheck.check(JVMCheck.java:123)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:268)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+[2016-05-15 13:46:53,101][INFO ][node                     ] [Tomazooma] version[2.3.2], pid[7208], build[b9e4a6a/2016-04-21T16:03:47Z]
+[2016-05-15 13:46:53,102][INFO ][node                     ] [Tomazooma] initializing ...
+[2016-05-15 13:46:53,874][INFO ][plugins                  ] [Tomazooma] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-05-15 13:46:53,919][INFO ][env                      ] [Tomazooma] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [75.3gb], net total_space [96.3gb], spins? [possibly], types [ext4]
+[2016-05-15 13:46:53,919][INFO ][env                      ] [Tomazooma] heap size [1007.3mb], compressed ordinary object pointers [true]
+[2016-05-15 13:46:53,920][WARN ][env                      ] [Tomazooma] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-05-15 13:46:56,831][INFO ][node                     ] [Tomazooma] initialized
+[2016-05-15 13:46:56,831][INFO ][node                     ] [Tomazooma] starting ...
+[2016-05-15 13:46:56,967][INFO ][transport                ] [Tomazooma] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-05-15 13:46:56,975][INFO ][discovery                ] [Tomazooma] drakestears/kXyy4oWbS3unk2xicpoN_g
+[2016-05-15 13:47:00,036][INFO ][cluster.service          ] [Tomazooma] new_master {Tomazooma}{kXyy4oWbS3unk2xicpoN_g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-05-15 13:47:00,077][INFO ][http                     ] [Tomazooma] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-05-15 13:47:00,079][INFO ][node                     ] [Tomazooma] started
+[2016-05-15 13:47:00,159][INFO ][gateway                  ] [Tomazooma] recovered [0] indices into cluster_state
+[2016-05-15 13:47:07,774][INFO ][node                     ] [Tomazooma] stopping ...
+[2016-05-15 13:47:07,800][INFO ][node                     ] [Tomazooma] stopped
+[2016-05-15 13:47:07,801][INFO ][node                     ] [Tomazooma] closing ...
+[2016-05-15 13:47:07,812][INFO ][node                     ] [Tomazooma] closed
+[2016-05-15 13:47:14,391][INFO ][node                     ] [Obituary] version[2.3.2], pid[7309], build[b9e4a6a/2016-04-21T16:03:47Z]
+[2016-05-15 13:47:14,391][INFO ][node                     ] [Obituary] initializing ...
+[2016-05-15 13:47:14,998][INFO ][plugins                  ] [Obituary] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-05-15 13:47:15,020][INFO ][env                      ] [Obituary] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [75.3gb], net total_space [96.3gb], spins? [possibly], types [ext4]
+[2016-05-15 13:47:15,021][INFO ][env                      ] [Obituary] heap size [1007.3mb], compressed ordinary object pointers [true]
+[2016-05-15 13:47:15,021][WARN ][env                      ] [Obituary] max file descriptors [4096] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-05-15 13:47:17,248][INFO ][node                     ] [Obituary] initialized
+[2016-05-15 13:47:17,248][INFO ][node                     ] [Obituary] starting ...
+[2016-05-15 13:47:17,336][INFO ][transport                ] [Obituary] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-05-15 13:47:17,343][INFO ][discovery                ] [Obituary] drakestears/svUaTyhcTD6gkZRPM2wQ4g
+[2016-05-15 13:47:20,400][INFO ][cluster.service          ] [Obituary] new_master {Obituary}{svUaTyhcTD6gkZRPM2wQ4g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-05-15 13:47:20,423][INFO ][http                     ] [Obituary] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-05-15 13:47:20,423][INFO ][node                     ] [Obituary] started
+[2016-05-15 13:47:20,436][INFO ][gateway                  ] [Obituary] recovered [0] indices into cluster_state
