@@ -54,3 +54,5 @@ Upgrading is preferred, this workaround will result in degraded performance.
 [2016-05-15 13:47:20,423][INFO ][http                     ] [Obituary] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
 [2016-05-15 13:47:20,423][INFO ][node                     ] [Obituary] started
 [2016-05-15 13:47:20,436][INFO ][gateway                  ] [Obituary] recovered [0] indices into cluster_state
+[2016-05-15 16:23:13,288][INFO ][cluster.metadata         ] [Obituary] [movies] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-05-15 16:23:13,688][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies][1], [movies][3], [movies][2], [movies][1], [movies][3], [movies][2], [movies][4]] ...]).
