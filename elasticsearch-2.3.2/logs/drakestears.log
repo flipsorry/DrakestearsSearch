@@ -56,3 +56,1629 @@ Upgrading is preferred, this workaround will result in degraded performance.
 [2016-05-15 13:47:20,436][INFO ][gateway                  ] [Obituary] recovered [0] indices into cluster_state
 [2016-05-15 16:23:13,288][INFO ][cluster.metadata         ] [Obituary] [movies] creating index, cause [api], templates [], shards [5]/[1], mappings []
 [2016-05-15 16:23:13,688][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies][1], [movies][3], [movies][2], [movies][1], [movies][3], [movies][2], [movies][4]] ...]).
+[2016-05-15 16:40:19,653][WARN ][http.netty               ] [Obituary] Caught exception while handling client http traffic, closing connection [id: 0x61ebf2fd, /127.0.0.1:43637 => /127.0.0.1:9200]
+java.lang.IllegalArgumentException: invalid version format: WICK HTTP/1.1
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:94)
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62)
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75)
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:191)
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:102)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:40:19,687][WARN ][http.netty               ] [Obituary] Caught exception while handling client http traffic, closing connection [id: 0x61ebf2fd, /127.0.0.1:43637 :> /127.0.0.1:9200]
+java.lang.IllegalArgumentException: empty text
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:89)
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62)
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75)
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:191)
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:102)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.cleanup(ReplayingDecoder.java:554)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:102)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireChannelDisconnected(Channels.java:396)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:360)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:81)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:36)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:779)
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:54)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:784)
+	at org.jboss.netty.channel.SimpleChannelHandler.closeRequested(SimpleChannelHandler.java:334)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleDownstream(SimpleChannelHandler.java:260)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.handleDownstream(HttpPipeliningHandler.java:105)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.jboss.netty.channel.Channels.close(Channels.java:812)
+	at org.jboss.netty.channel.AbstractChannel.close(AbstractChannel.java:206)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.exceptionCaught(NettyHttpServerTransport.java:465)
+	at org.elasticsearch.http.netty.HttpRequestHandler.exceptionCaught(HttpRequestHandler.java:70)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelHandler.exceptionCaught(SimpleChannelHandler.java:156)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:130)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.exceptionCaught(SimpleChannelUpstreamHandler.java:153)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.exceptionCaught(SimpleChannelUpstreamHandler.java:153)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.exceptionCaught(FrameDecoder.java:377)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireExceptionCaught(Channels.java:525)
+	at org.jboss.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:48)
+	at org.jboss.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:566)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:44:28,239][INFO ][cluster.metadata         ] [Obituary] [movies] create_mapping [external]
+[2016-05-15 16:48:34,306][DEBUG][action.search            ] [Obituary] [movies][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=va6f4ranTYmkfS7DnfC83Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@369e89cf] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,307][DEBUG][action.search            ] [Obituary] [movies][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=xkML7Qf5Sy6oApGNXWfcQg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@369e89cf] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,307][DEBUG][action.search            ] [Obituary] [movies][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=YxcmPu2QSzer-1pLpWtK8w]: Failed to execute [org.elasticsearch.action.search.SearchRequest@369e89cf] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,307][DEBUG][action.search            ] [Obituary] [movies][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=cPU3bB6oQqW2b1aouTZIaQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@369e89cf] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,309][DEBUG][action.search            ] [Obituary] [movies][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=C9dTvcrgTdKsSnls5HXDrA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@369e89cf]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,313][DEBUG][action.search            ] [Obituary] All shards failed for phase: [query]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]];
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 16:48:34,314][WARN ][rest.suppressed          ] /movies/_search/template Params: {index=movies}
+Failed to execute phase [query], all shards failed; shardFailures {[svUaTyhcTD6gkZRPM2wQ4g][movies][0]: RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]]; }{[svUaTyhcTD6gkZRPM2wQ4g][movies][1]: RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]]; }{[svUaTyhcTD6gkZRPM2wQ4g][movies][2]: RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]]; }{[svUaTyhcTD6gkZRPM2wQ4g][movies][3]: RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]]; }{[svUaTyhcTD6gkZRPM2wQ4g][movies][4]: RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: ScriptParseException[unexpected field [pretty]]; }
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction.onFirstPhaseResult(AbstractSearchAsyncAction.java:206)
+	at org.elasticsearch.action.search.AbstractSearchAsyncAction$1.onFailure(AbstractSearchAsyncAction.java:152)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:855)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:833)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:387)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:39)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ScriptParseException[unexpected field [pretty]]
+	at org.elasticsearch.script.AbstractScriptParser.parse(AbstractScriptParser.java:107)
+	at org.elasticsearch.script.Template.parse(Template.java:134)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:116)
+	at org.elasticsearch.index.query.TemplateQueryParser.parse(TemplateQueryParser.java:99)
+	at org.elasticsearch.search.SearchService.parseTemplate(SearchService.java:768)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:653)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-05-15 16:58:26,961][INFO ][cluster.metadata         ] [Obituary] [customer] creating index, cause [auto(delete api)], templates [], shards [5]/[1], mappings []
+[2016-05-15 16:58:27,040][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[customer][4]] ...]).
+[2016-05-15 17:03:01,173][DEBUG][action.search            ] [Obituary] [movies][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=YxcmPu2QSzer-1pLpWtK8w]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6bef7992] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:03:01,179][DEBUG][action.search            ] [Obituary] [movies][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=C9dTvcrgTdKsSnls5HXDrA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6bef7992]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:03:01,182][DEBUG][action.search            ] [Obituary] All shards failed for phase: [query]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:03:01,174][DEBUG][action.search            ] [Obituary] [movies][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=va6f4ranTYmkfS7DnfC83Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6bef7992] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:03:01,174][DEBUG][action.search            ] [Obituary] [movies][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=xkML7Qf5Sy6oApGNXWfcQg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6bef7992] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:03:01,174][DEBUG][action.search            ] [Obituary] [movies][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=cPU3bB6oQqW2b1aouTZIaQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@6bef7992] lastShard [true]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+Caused by: SearchParseException[failed to parse search source [{"query":{"terms":{"name":"happy gilmore"}}}]]; nested: QueryParsingException[[terms] query does not support [name]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:855)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:654)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:620)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:371)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [movies] QueryParsingException[[terms] query does not support [name]]
+	at org.elasticsearch.index.query.TermsQueryParser.parse(TermsQueryParser.java:155)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:250)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:838)
+	... 12 more
+[2016-05-15 17:13:03,189][INFO ][cluster.metadata         ] [Obituary] [movies] create_mapping [search]
+[2016-05-15 17:19:07,160][INFO ][cluster.metadata         ] [Obituary] [movies] creating index, cause [api], templates [], shards [1]/[1], mappings []
+[2016-05-15 17:19:07,189][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies][0]] ...]).
+[2016-05-15 17:36:02,377][INFO ][cluster.metadata         ] [Obituary] [videos] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-05-15 17:36:02,468][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[videos][4]] ...]).
+[2016-05-15 17:38:31,518][DEBUG][action.admin.indices.mapping.put] [Obituary] failed to put mappings on indices [[videos]], type [search]
+MapperParsingException[analyzer on completion field [suggest] must be set when search_analyzer is set]
+	at org.elasticsearch.index.mapper.core.CompletionFieldMapper$TypeParser.parse(CompletionFieldMapper.java:202)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseProperties(ObjectMapper.java:305)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseObjectOrDocumentTypeProperties(ObjectMapper.java:218)
+	at org.elasticsearch.index.mapper.object.RootObjectMapper$TypeParser.parse(RootObjectMapper.java:139)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:118)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:99)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:508)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:257)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 17:38:59,746][DEBUG][action.admin.indices.mapping.put] [Obituary] failed to put mappings on indices [[videos]], type [search]
+MapperParsingException[analyzer on completion field [suggest] must be set when search_analyzer is set]
+	at org.elasticsearch.index.mapper.core.CompletionFieldMapper$TypeParser.parse(CompletionFieldMapper.java:202)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseProperties(ObjectMapper.java:305)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseObjectOrDocumentTypeProperties(ObjectMapper.java:218)
+	at org.elasticsearch.index.mapper.object.RootObjectMapper$TypeParser.parse(RootObjectMapper.java:139)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:118)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:99)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:508)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:257)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 17:39:48,478][DEBUG][action.admin.indices.mapping.put] [Obituary] failed to put mappings on indices [[videos]], type [search]
+MapperParsingException[analyzer on completion field [suggest] must be set when search_analyzer is set]
+	at org.elasticsearch.index.mapper.core.CompletionFieldMapper$TypeParser.parse(CompletionFieldMapper.java:202)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseProperties(ObjectMapper.java:305)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseObjectOrDocumentTypeProperties(ObjectMapper.java:218)
+	at org.elasticsearch.index.mapper.object.RootObjectMapper$TypeParser.parse(RootObjectMapper.java:139)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:118)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:99)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:508)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:257)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 17:41:56,063][DEBUG][action.admin.indices.mapping.put] [Obituary] failed to put mappings on indices [[videos]], type [movies]
+MapperParsingException[analyzer on completion field [suggest] must be set when search_analyzer is set]
+	at org.elasticsearch.index.mapper.core.CompletionFieldMapper$TypeParser.parse(CompletionFieldMapper.java:202)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseProperties(ObjectMapper.java:305)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseObjectOrDocumentTypeProperties(ObjectMapper.java:218)
+	at org.elasticsearch.index.mapper.object.RootObjectMapper$TypeParser.parse(RootObjectMapper.java:139)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:118)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:99)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:508)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:257)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 17:42:46,526][DEBUG][action.admin.indices.mapping.put] [Obituary] failed to put mappings on indices [[videos]], type [search]
+MapperParsingException[analyzer on completion field [suggest] must be set when search_analyzer is set]
+	at org.elasticsearch.index.mapper.core.CompletionFieldMapper$TypeParser.parse(CompletionFieldMapper.java:202)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseProperties(ObjectMapper.java:305)
+	at org.elasticsearch.index.mapper.object.ObjectMapper$TypeParser.parseObjectOrDocumentTypeProperties(ObjectMapper.java:218)
+	at org.elasticsearch.index.mapper.object.RootObjectMapper$TypeParser.parse(RootObjectMapper.java:139)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:118)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:99)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:508)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:257)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-15 17:43:35,306][INFO ][cluster.metadata         ] [Obituary] [videos] create_mapping [search]
+[2016-05-15 17:47:11,008][INFO ][cluster.metadata         ] [Obituary] [movies] creating index, cause [auto(index api)], templates [], shards [5]/[1], mappings [search]
+[2016-05-15 17:47:11,096][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies][4], [movies][4]] ...]).
+[2016-05-15 17:47:11,123][INFO ][cluster.metadata         ] [Obituary] [movies] update_mapping [search]
+[2016-05-15 17:48:54,172][DEBUG][action.suggest           ] [Obituary] [movies][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=VDAzp3pIQ2CyBlZzDC2PZw]: failed to execute [[[movies]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ElasticsearchException[Field [suggest] is not a completion suggest field];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ElasticsearchException[Field [suggest] is not a completion suggest field];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ElasticsearchException[Field [suggest] is not a completion suggest field]
+	at org.elasticsearch.search.suggest.completion.CompletionSuggester.innerExecute(CompletionSuggester.java:53)
+	at org.elasticsearch.search.suggest.completion.CompletionSuggester.innerExecute(CompletionSuggester.java:44)
+	at org.elasticsearch.search.suggest.Suggester.execute(Suggester.java:41)
+	at org.elasticsearch.search.suggest.SuggestPhase.execute(SuggestPhase.java:85)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:147)
+	... 9 more
+[2016-05-15 17:49:52,302][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:49:52,304][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:49:52,305][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:49:52,303][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:49:52,308][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:01,552][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:01,556][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:01,554][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:01,561][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:01,562][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "title"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ClassCastException[org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.elasticsearch.index.mapper.core.StringFieldMapper$StringFieldType cannot be cast to org.elasticsearch.index.mapper.core.CompletionFieldMapper$CompletionFieldType
+	at org.elasticsearch.search.suggest.completion.CompletionSuggestParser.parse(CompletionSuggestParser.java:105)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:94)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:51:17,353][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search_suggest":{
+        "text":"john",
+        "completion": {
+            "field" : "suggests"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: ElasticsearchException[Field [suggests] is not a completion suggest field];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: ElasticsearchException[Field [suggests] is not a completion suggest field];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: ElasticsearchException[Field [suggests] is not a completion suggest field]
+	at org.elasticsearch.search.suggest.completion.CompletionSuggester.innerExecute(CompletionSuggester.java:53)
+	at org.elasticsearch.search.suggest.completion.CompletionSuggester.innerExecute(CompletionSuggester.java:44)
+	at org.elasticsearch.search.suggest.Suggester.execute(Suggester.java:41)
+	at org.elasticsearch.search.suggest.SuggestPhase.execute(SuggestPhase.java:85)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:147)
+	... 9 more
+[2016-05-15 17:57:11,972][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:57:11,975][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:57:11,978][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:57:11,972][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:57:11,982][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:58:01,107][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"jo",
+        "completion": {
+            "field" : "suggest"
+        },curl -XPOST "http://localhost:9200/videos/_suggest?pretty" -d]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3006)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2981)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:744)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:77)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:58:01,108][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"jo",
+        "completion": {
+            "field" : "suggest"
+        },curl -XPOST "http://localhost:9200/videos/_suggest?pretty" -d]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3006)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2981)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:744)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:77)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:58:01,109][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"jo",
+        "completion": {
+            "field" : "suggest"
+        },curl -XPOST "http://localhost:9200/videos/_suggest?pretty" -d]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3006)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2981)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:744)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:77)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:58:01,107][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"jo",
+        "completion": {
+            "field" : "suggest"
+        },curl -XPOST "http://localhost:9200/videos/_suggest?pretty" -d]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3006)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2981)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:744)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:77)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 17:58:01,110][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"jo",
+        "completion": {
+            "field" : "suggest"
+        },curl -XPOST "http://localhost:9200/videos/_suggest?pretty" -d]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: JsonParseException[Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('-' (code 45)): was expecting a colon to separate field name and value
+ at [Source: [B@43b3fab7; line: 7, column: 17]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3006)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:2981)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:744)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:77)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:08,247][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:08,247][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:08,248][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:08,251][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:08,250][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,653][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,654][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,654][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,655][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,653][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,661][DEBUG][action.suggest           ] [Obituary] [videos][1], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=T1-sWjjqSf23AvtyMDWksA]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,661][DEBUG][action.suggest           ] [Obituary] [videos][2], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=PAcjz36pQp-_1t8SnALC5g]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,662][DEBUG][action.suggest           ] [Obituary] [videos][3], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=UdglMyQYSGqan5u6C5uhyg]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,663][DEBUG][action.suggest           ] [Obituary] [videos][4], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=iqXnS1s2R-y_0G18gGQqXw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:09:37,661][DEBUG][action.suggest           ] [Obituary] [videos][0], node[svUaTyhcTD6gkZRPM2wQ4g], [P], v[2], s[STARTED], a[id=P85VJjXtSQOXXMyPSAkyfw]: failed to execute [[[videos]], suggestSource[
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        },
+        "fuzzy" : {
+                "fuzziness" : 2
+            }
+    }
+}curl&
+{
+    "search-suggest":{
+        "text":"john wick",
+        "completion": {
+            "field" : "suggest"
+        }
+    }
+}]]
+RemoteTransportException[[Obituary][127.0.0.1:9300][indices:data/read/suggest[s]]]; nested: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+Caused by: ElasticsearchException[failed to execute suggest]; nested: IllegalArgumentException[Suggester[fuzzy] not supported];
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:152)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:61)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:282)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastAction$ShardTransportHandler.messageReceived(TransportBroadcastAction.java:278)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:75)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Suggester[fuzzy] not supported
+	at org.elasticsearch.search.suggest.SuggestParseElement.parseInternal(SuggestParseElement.java:91)
+	at org.elasticsearch.action.suggest.TransportSuggestAction.shardOperation(TransportSuggestAction.java:145)
+	... 9 more
+[2016-05-15 18:15:37,923][INFO ][cluster.metadata         ] [Obituary] [videos] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-05-15 18:15:37,990][INFO ][cluster.routing.allocation] [Obituary] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[videos][0], [videos][4], [videos][2], [videos][2], [videos][0]] ...]).
+[2016-05-15 18:15:44,549][INFO ][cluster.metadata         ] [Obituary] [videos] create_mapping [search]
